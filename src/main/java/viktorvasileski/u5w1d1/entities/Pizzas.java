@@ -14,11 +14,9 @@ public class Pizzas extends MenuItem{
 
     @Override
     public String toString() {
-        return "Pizzas{" +
-                ", name='" + name + '\'' +
-                "toppingList=" + toppingList +
+        return name +
+                " toppings: " + toppingList +
                 ", calories=" + calories +
-                ", price=" + price +
-                '}';
+                ", price=" + price ;
     }
 }

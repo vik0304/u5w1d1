@@ -16,10 +16,9 @@ public abstract class MenuItem {
 
     @Override
     public String toString() {
-        return "MenuItem{" +
+        return "MenuItem" +
                 "name='" + name + '\'' +
                 ", calories=" + calories +
-                ", price=" + price +
-                '}';
+                ", price=" + price;
     }
 }

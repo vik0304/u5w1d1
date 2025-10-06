@@ -17,10 +17,9 @@ public class Menu {
 
     @Override
     public String toString() {
-        return "Menu{" +
-                "menuPizzaList=" + menuPizzaList +
-                ", menuToppingList=" + menuToppingList +
-                ", menuDrinkList=" + menuDrinkList +
-                '}';
+        return "Menu: \n" +
+                "Pizzas=" + menuPizzaList + "\n" +
+                "Toppings=" + menuToppingList + "\n" +
+                "Drinks=" + menuDrinkList;
     }
 }

@@ -9,10 +9,8 @@ public class Drink extends MenuItem{
 
     @Override
     public String toString() {
-        return "Drink{" +
-                "name='" + name + '\'' +
+        return name + '\'' +
                 ", calories=" + calories +
-                ", price=" + price +
-                '}';
+                ", price=" + price;
     }
 }
