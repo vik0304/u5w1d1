@@ -14,6 +14,10 @@ public abstract class MenuItem {
         this.price=price;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
         return "MenuItem" +
