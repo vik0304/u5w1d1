@@ -1,15 +1,15 @@
 package viktorvasileski.u5w1d1;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import viktorvasileski.u5w1d1.entities.Drink;
-import viktorvasileski.u5w1d1.entities.Menu;
-import viktorvasileski.u5w1d1.entities.Pizzas;
-import viktorvasileski.u5w1d1.entities.Topping;
+import org.springframework.context.annotation.PropertySource;
+import viktorvasileski.u5w1d1.entities.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@PropertySource("classpath:application.properties")
 @Configuration
 public class AppConfig {
 
@@ -103,4 +103,20 @@ public class AppConfig {
         drinkList.add(getWine());
         return new Menu(pizzasList, toppingList, drinkList);
     }
+
+    @Bean(name = "Table1")
+    public Table getTable1(){
+        return new Table(1, 6, false);
+    }
+
+    @Bean(name = "Table2")
+    public Table getTable2(){
+        return new Table(2, 8, false);
+    }
+
+    @Bean(name = "Table3")
+    public Table getTable3(){
+        return new Table(3, 4, true);
+    }
+
 }

@@ -10,6 +10,9 @@ public class Topping extends MenuItem{
 
     @Override
     public String toString() {
-        return  name;
+        return name + '{' +
+                ", calories=" + calories +
+                ", price=" + price +
+                '}';
     }
 }
