@@ -1,6 +1,8 @@
 package viktorvasileski.u5w1d1.entities;
 
+import lombok.Getter;
 
+@Getter
 public abstract class MenuItem {
     protected String name;
     protected int calories;
@@ -12,10 +14,6 @@ public abstract class MenuItem {
         this.name=name;
         this.calories=calories;
         this.price=price;
-    }
-
-    public double getPrice() {
-        return price;
     }
 
     @Override

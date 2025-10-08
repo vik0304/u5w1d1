@@ -43,7 +43,7 @@ public class AppConfig {
         return new Topping("Tomato", 68, 0.39);
     }
 
-    @Bean(name = "Lemonade")
+    @Bean(name = "lemonade")
     public Drink getLemonade(){
         return new Drink("Lemonade (0.33l)", 128, 1.29);
     }
@@ -53,12 +53,12 @@ public class AppConfig {
         return new Drink("Water (0.5l)", 0, 1.29);
     }
 
-    @Bean(name = "Wine")
+    @Bean(name = "wine")
     public Drink getWine(){
         return new Drink("Wine(0.75l, 13%)", 607, 7.49);
     }
 
-    @Bean(name = "Pizza Margherita")
+    @Bean(name = "pizza_margherita")
     public Pizzas getMargherita(){
         List<Topping> toppingList = new ArrayList<>();
         toppingList.add(getTomato());
@@ -66,7 +66,7 @@ public class AppConfig {
         return new Pizzas("Pizza Margherita", 1104, 4.99, toppingList);
     }
 
-    @Bean(name = "Hawaiian Pizza")
+    @Bean(name = "hawaiian_pizza")
     public Pizzas getHawaiian(){
         List<Topping> toppingList = new ArrayList<>();
         toppingList.add(getTomato());
@@ -76,7 +76,7 @@ public class AppConfig {
         return new Pizzas("Hawaiian Pizza", 1024, 6.49, toppingList);
     }
 
-    @Bean(name = "Pizza Salami")
+    @Bean(name = "salami_pizza")
     public Pizzas getSalamiPizza(){
         List<Topping> toppingList = new ArrayList<>();
         toppingList.add(getTomato());
@@ -104,19 +104,19 @@ public class AppConfig {
         return new Menu(pizzasList, toppingList, drinkList);
     }
 
-    @Bean(name = "Table1")
-    public Table getTable1(){
-        return new Table(1, 6, false);
+    @Bean("Tavolo1")
+    Table getTable1(@Value("${table.charge}") double seatPrice) {
+        return new Table(1, 5, true, seatPrice);
     }
 
-    @Bean(name = "Table2")
-    public Table getTable2(){
-        return new Table(2, 8, false);
+    @Bean("Tavolo2")
+    Table getTable2(@Value("${table.charge}") double seatPrice) {
+        return new Table(2, 4, true, seatPrice);
     }
 
-    @Bean(name = "Table3")
-    public Table getTable3(){
-        return new Table(3, 4, true);
+    @Bean("Tavolo3")
+    Table getTable3(@Value("${table.charge}") double seatPrice) {
+        return new Table(3, 8, true, seatPrice);
     }
 
 }
